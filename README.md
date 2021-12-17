@@ -1,3 +1,3 @@
 # SortNames
 
-Run Program class to check results -- SotNames/Programs.
+Run Program class to check results -- SortNames/Programs.
