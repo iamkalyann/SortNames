@@ -24,12 +24,12 @@ namespace SortNames
                 var delimiter = " ";
                 var reader = p.FileReader(inputFilename);
                 var persons = p.FileParsing(reader, delimiter);
-                var sortedList = p.FileSorter(persons);
-                foreach (var person in sortedList)
+                var sorting = p.FileSorter(persons);
+                foreach (var person in sorting)
                 {
                     System.Console.WriteLine(person.ToString());
                 }
-                var writer = p.FileWriter(sortedList, outputFilename);
+                var writer = p.FileWriter(sorting, outputFilename);
             }
             catch (Exception ex)
             {
