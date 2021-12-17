@@ -12,7 +12,7 @@ namespace UnitTests
     {
         [TestMethod]
         //reader test
-        public void Is_Valid_File_Path()
+        public void FilePathCheck()
         {
             // Arrange
             var filename = "./unsorted-names-list.txt";
@@ -28,7 +28,7 @@ namespace UnitTests
 
         [TestMethod]
         [ExpectedException(typeof(FileNotFoundException))]
-        public void Is_Invalid_File_Path()
+        public void FilePathInvalid()
         {
             // Arrange
             var p = new Program();
@@ -42,7 +42,7 @@ namespace UnitTests
         }
         //Writer test
         [TestMethod]
-        public void Is_File_Created()
+        public void FileCreated()
         {
             // Arrange
             var p = new Program();
@@ -58,14 +58,16 @@ namespace UnitTests
         }
         //Sorter test
         [TestMethod]
-        public void Is_List_Sorted_By_LastName()
+        public void LnameSorting()
         {
             var p = new Program();
             var list = new List<PersonName>();
-            list.Add(new PersonName("two", "B"));
+            list.Add(new PersonName("two", "K"));
             list.Add(new PersonName("one", "A"));
-            list.Add(new PersonName("four", "D"));
-            list.Add(new PersonName("three", "C"));
+            list.Add(new PersonName("four", "L"));
+            list.Add(new PersonName("three", "Y"));
+            list.Add(new PersonName("five", "G"));
+            list.Add(new PersonName("six", "N"));
 
             var sortedList = p.FileSorter(list);
 
@@ -73,7 +75,7 @@ namespace UnitTests
         }
         //Sorter test
         [TestMethod]
-        public void Given_List_With_OneName_Return_OneName()
+        public void ReturnName()
         {
             var p = new Program();
             var list = new List<PersonName>();
