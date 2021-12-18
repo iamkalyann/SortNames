@@ -73,18 +73,5 @@ namespace UnitTests
 
             Assert.AreEqual("A", sortedList.First().LastName);
         }
-        //Sorter test
-        [TestMethod]
-        public void ReturnName()
-        {
-            var p = new Program();
-            var list = new List<PersonName>();
-            list.Add(new PersonName("one", "A"));
-
-            var sortedList = p.FileSorter(list);
-
-            Assert.AreEqual("A", sortedList.First().LastName);
-        }
-
     }
 }
